@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_negrito"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_format_bold_24"
+        android:backgroundTint="#818181"
+        android:onClick="negrito"
+        android:textStyle="bold"
+        app:iconTint="#848484"
+        app:layout_constraintEnd_toStartOf="@+id/btn_italico"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_italico"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_format_italic_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="italico"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/btn_underline"
+        app:layout_constraintStart_toEndOf="@+id/btn_negrito"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_underline"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_format_underlined_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="underLine"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/btn_left"
+        app:layout_constraintStart_toEndOf="@+id/btn_italico"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_format_align_left_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="esquerda"
+        android:text=""
+        android:textStyle="italic"
+        app:iconGravity="textStart"
+        app:layout_constraintEnd_toStartOf="@+id/btn_center"
+        app:layout_constraintStart_toEndOf="@+id/btn_underline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_center"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_format_align_center_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="centro"
+        android:textStyle="italic"
+        app:iconGravity="top"
+        app:layout_constraintEnd_toStartOf="@+id/btn_right"
+        app:layout_constraintStart_toEndOf="@+id/btn_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btn_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ic_baseline_format_align_right_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="direita"
+        android:text=""
+        android:textStyle="italic"
+        app:iconGravity="textEnd"
+        app:layout_constraintEnd_toStartOf="@+id/btn_noFormat"
+        app:layout_constraintStart_toEndOf="@+id/btn_center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_noFormat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_baseline_format_clear_24"
+        android:backgroundTint="@android:color/darker_gray"
+        android:onClick="limpar"
+        android:text=""
+        android:textStyle="italic"
+        app:iconGravity="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTexto"
+        android:layout_width="0dp"
+        android:layout_height="399dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Digite aqui... Lembre-se: Selecione e a parte do texto e escolha uma formatação."
+        android:inputType="textMultiLine"
+        android:paddingTop="24dp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_negrito" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
